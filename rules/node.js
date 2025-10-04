@@ -1,0 +1,19 @@
+/**
+ * Node.js specific rules
+ * For server-side JavaScript and build scripts
+ */
+
+const WARN = 1
+
+module.exports = {
+    'n/exports-style': 0,
+    'n/file-extension-in-import': 0,
+    'n/prefer-global/buffer': [WARN, 'always'],
+    'n/prefer-global/console': [WARN, 'always'],
+    'n/prefer-global/process': [WARN, 'always'],
+    'n/prefer-global/url': [WARN, 'always'],
+    'n/prefer-global/url-search-params': [WARN, 'always'],
+    'n/prefer-promises/dns': WARN,
+    'n/prefer-promises/fs': WARN,
+    'n/no-unsupported-features/es-syntax': 0, // Let TypeScript handle this
+}
