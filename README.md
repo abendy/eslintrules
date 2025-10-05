@@ -5,55 +5,168 @@ Modern, modular ESLint and Prettier setup for TypeScript/React/Node/Remix projec
 ## Installation
 
 ```bash
-npm install --save-dev \
-  eslint \
-  prettier \
-  @abendy/eslint-config
+npm install --save-dev eslint prettier @abendy/eslint-config
 ```
 
-Or if developing this config:
+---
 
-```bash
-npm install
-```
-
-## Usage
-
-### ESLint
-
-Create `eslint.config.js` in your project root:
+### Option 1: Use Everything (Default)
 
 ```js
+// eslint.config.js
 module.exports = require('@abendy/eslint-config')
 ```
 
-Or extend it with custom rules:
+Gets: Base + React + TypeScript + Node + Remix + Test + JSON + YAML
+
+---
+
+### Option 2: Pick Individual Configs
+
+#### Base JavaScript Only
 
 ```js
-const baseConfig = require('@abendy/eslint-config')
+// eslint.config.js
+module.exports = require('@abendy/eslint-config/configs/base')
+```
 
+#### Base + React
+
+```js
+// eslint.config.js
 module.exports = [
-    ...baseConfig,
-    {
-        // Your custom overrides
-        rules: {
-            'no-console': 'off',
-        },
-    },
+    ...require('@abendy/eslint-config/configs/base'),
+    ...require('@abendy/eslint-config/configs/react'),
 ]
 ```
 
-### Prettier
-
-Create `prettier.config.js` in your project root:
+#### Base + React + TypeScript
 
 ```js
-module.exports = require('@abendy/eslint-config/prettier.config')
+module.exports = [
+    ...require('@abendy/eslint-config/configs/base'),
+    ...require('@abendy/eslint-config/configs/react'),
+    ...require('@abendy/eslint-config/configs/typescript'),
+]
 ```
 
-Or use your own config - our ESLint setup works with any Prettier config.
+---
 
-### Scripts
+### Option 3: Use Individual Configs + Override
+
+#### Override Specific Rules
+
+```js
+module.exports = [
+    ...require('@abendy/eslint-config/configs/base'),
+    ...require('@abendy/eslint-config/configs/react'),
+    {
+        rules: {
+            'no-console': 'off',
+            'react/jsx-sort-props': 'off',
+        }
+    }
+]
+```
+
+#### Add Your Own Configs
+
+```js
+module.exports = [
+    ...require('@abendy/eslint-config'),
+    {
+        files: ['**/*.custom.js'],
+        rules: {
+            'no-console': 'off',
+        }
+    }
+]
+```
+
+---
+
+### Option 4: Use from Index
+
+```js
+const configs = require('@abendy/eslint-config/configs')
+
+module.exports = [
+    ...configs.base,
+    ...configs.react,
+    ...configs.typescript,
+    // Skip node, remix, test if you don't need them
+]
+```
+
+---
+
+### Option 5: Access Individual Rules
+
+```js
+const coreRules = require('@abendy/eslint-config/rules/core')
+const reactRules = require('@abendy/eslint-config/rules/react')
+
+module.exports = [
+    {
+        files: ['**/*.js'],
+        rules: {
+            ...coreRules,
+            'no-console': 'off', // Override
+        }
+    },
+    {
+        files: ['**/*.jsx'],
+        rules: {
+            ...coreRules,
+            ...reactRules,
+            'react/jsx-sort-props': 'off', // Override
+        }
+    }
+]
+```
+
+---
+
+## Available Configs
+
+| Config | Path | Description |
+|--------|------|-------------|
+| **All** | `@abendy/eslint-config` | Everything combined |
+| **Base** | `@abendy/eslint-config/configs/base` | Core JS/ES6+ rules |
+| **React** | `@abendy/eslint-config/configs/react` | React + Hooks + a11y |
+| **TypeScript** | `@abendy/eslint-config/configs/typescript` | TypeScript strict |
+| **Node** | `@abendy/eslint-config/configs/node` | Node.js rules |
+| **Remix** | `@abendy/eslint-config/configs/remix` | Remix routes |
+| **Test** | `@abendy/eslint-config/configs/test` | Test files |
+| **JSON** | `@abendy/eslint-config/configs/json` | JSON linting |
+| **YAML** | `@abendy/eslint-config/configs/yaml` | YAML linting |
+
+---
+
+## Available Rules
+
+| Rules | Path | Description |
+|-------|------|-------------|
+| **Core** | `@abendy/eslint-config/rules/core` | Core JavaScript rules |
+| **Import** | `@abendy/eslint-config/rules/import` | Import/export rules |
+| **React** | `@abendy/eslint-config/rules/react` | React component rules |
+| **TypeScript** | `@abendy/eslint-config/rules/typescript` | TypeScript rules |
+| **Promise** | `@abendy/eslint-config/rules/promise` | Promise best practices |
+| **Unicorn** | `@abendy/eslint-config/rules/unicorn` | Modern JS patterns |
+| **Perfectionist** | `@abendy/eslint-config/rules/perfectionist` | Auto-sorting rules |
+| **JSX a11y** | `@abendy/eslint-config/rules/jsx-a11y` | Accessibility rules |
+| **Node** | `@abendy/eslint-config/rules/node` | Node.js rules |
+
+---
+
+## Prettier
+
+```js
+// prettier.config.js
+module.exports = require('@abendy/eslint-config/prettier')
+```
+
+## Scripts
 
 Add these to your `package.json`:
 
@@ -68,45 +181,9 @@ Add these to your `package.json`:
 }
 ```
 
-## Customization
-
-### Adjusting Rule Severity
-
-Edit files in `rules/` directory:
-
-```js
-// rules/core.js
-module.exports = {
-    'no-console': 1, // Change to WARN instead of ERROR
-}
-```
-
-### Adding New Rules
-
-Create a new file in `rules/` and import it in `eslint.config.js`:
-
-```js
-const myCustomRules = require('./rules/custom')
-
-// Add to appropriate config section
-rules: {
-    ...myCustomRules,
-}
-```
-
-### Disabling Auto-Sorting
-
-In `rules/perfectionist.js`:
-
-```js
-module.exports = {
-    'perfectionist/sort-objects': 0, // Disable
-}
-```
-
 ## TypeScript Configuration
 
-Your project should have a `tsconfig.json`. Example:
+Your project should have a `tsconfig.json`:
 
 ```json
 {
@@ -124,7 +201,7 @@ Your project should have a `tsconfig.json`. Example:
 }
 ```
 
-## VS Code Integration
+## VS Code Setup
 
 Install extensions:
 
@@ -134,10 +211,12 @@ Install extensions:
 Add to `.vscode/settings.json`:
 
 ```json
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "eslint.experimental.useFlatConfig": true
+}
 ```
-
-## Troubleshooting
-
-### TypeScript rules not working
-
-Ensure `tsconfig.json` exists and `parserOptions.project` points to it in your config.

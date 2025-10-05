@@ -3,6 +3,20 @@
     "version": "1.0.0",
     "description": "Modern ESLint and Prettier configuration for TypeScript/React/Node/Remix projects",
     "main": "eslint.config.js",
+    "files": [
+        "eslint.config.js",
+        "prettier.config.js",
+        "configs",
+        "rules",
+        "settings"
+    ],
+    "exports": {
+        ".": "./eslint.config.js",
+        "./configs/*": "./configs/*.js",
+        "./rules/*": "./rules/*.js",
+        "./settings/*": "./settings/*.js",
+        "./prettier": "./prettier.config.js"
+    },
     "keywords": [
         "eslint",
         "eslintconfig",
@@ -14,10 +28,22 @@
     ],
     "author": "abendy",
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/abendy/eslint-config"
+    },
+    "bugs": {
+        "url": "https://github.com/abendy/eslint-config/issues"
+    },
     "peerDependencies": {
         "eslint": "^9.0.0",
         "prettier": "^3.0.0",
         "typescript": "^5.0.0"
+    },
+    "peerDependenciesMeta": {
+        "typescript": {
+            "optional": true
+        }
     },
     "dependencies": {
         "@eslint/js": "^9.15.0",
