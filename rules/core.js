@@ -27,18 +27,20 @@ module.exports = {
     'no-case-declarations': 0,
     'no-cond-assign': WARN,
     'no-console': WARN,
+    'no-const-assign': WARN, // Match reach-out-now severity
     'no-debugger': WARN,
     'no-delete-var': WARN,
     'no-empty': WARN,
     'no-empty-function': WARN,
-    'no-eval': ERROR,
-    'no-extend-native': ERROR,
+    'no-eval': WARN, // Match reach-out-now severity
+    'no-extend-native': WARN, // Match reach-out-now severity
+    'no-extra-semi': WARN,
     'no-floating-decimal': WARN,
-    'no-global-assign': ERROR,
+    'no-global-assign': WARN, // Match reach-out-now severity
     'no-implicit-globals': WARN,
     'no-multi-spaces': WARN,
-    'no-redeclare': ERROR,
-    'no-shadow-restricted-names': ERROR,
+    'no-redeclare': WARN, // Match reach-out-now severity
+    'no-shadow-restricted-names': WARN,
     'no-throw-literal': ERROR,
     'no-undef-init': WARN,
     'no-unused-vars': [
@@ -50,10 +52,10 @@ module.exports = {
         },
     ],
     'no-use-before-define': 0,
-    'no-var': ERROR,
+    'no-var': WARN, // Match reach-out-now severity
     'no-void': 0,
     'prefer-arrow-callback': WARN,
-    'prefer-const': ERROR,
+    'prefer-const': WARN, // Match reach-out-now severity
     'radix': ERROR,
     'strict': WARN,
 
