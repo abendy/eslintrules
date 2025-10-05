@@ -25,6 +25,7 @@ const promisePlugin = require('eslint-plugin-promise')
 const perfectionistPlugin = require('eslint-plugin-perfectionist')
 const nPlugin = require('eslint-plugin-n')
 const prettierConfig = require('eslint-config-prettier')
+const standardConfig = require('eslint-config-standard')
 
 // Import our modular rules
 const coreRules = require('./rules/core')
@@ -84,6 +85,7 @@ module.exports = [
         },
         rules: {
             ...js.configs.recommended.rules,
+            ...standardConfig.rules,
             ...coreRules,
             ...importRules,
             ...promiseRules,
