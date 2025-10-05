@@ -17,13 +17,14 @@ npm install --save-dev eslint prettier @abendy/eslint-config
 module.exports = require('@abendy/eslint-config')
 ```
 
-Gets: Base + React + TypeScript + Node + Remix + Test + JSON + YAML
+Gets: Base + React + Node + Remix + Test + JSON + YAML
 
-**Note:** Tailwind CSS support is opt-in. To use it, add:
+**Note:** TypeScript and Tailwind CSS are opt-in. To use them:
 ```js
 module.exports = [
     ...require('@abendy/eslint-config'),
-    ...require('@abendy/eslint-config/configs/tailwind'),
+    ...require('@abendy/eslint-config/configs/typescript'),  // If using TypeScript
+    ...require('@abendy/eslint-config/configs/tailwind'),    // If using Tailwind
 ]
 ```
 
@@ -48,13 +49,13 @@ module.exports = [
 ]
 ```
 
-#### Base + React + TypeScript
+#### Base + React + TypeScript (if using TS)
 
 ```js
 module.exports = [
     ...require('@abendy/eslint-config/configs/base'),
     ...require('@abendy/eslint-config/configs/react'),
-    ...require('@abendy/eslint-config/configs/typescript'),
+    ...require('@abendy/eslint-config/configs/typescript'),  // Opt-in
 ]
 ```
 
@@ -142,7 +143,7 @@ module.exports = [
 | **All** | `@abendy/eslint-config` | Everything combined |
 | **Base** | `@abendy/eslint-config/configs/base` | Core JS/ES6+ rules |
 | **React** | `@abendy/eslint-config/configs/react` | React + Hooks + a11y |
-| **TypeScript** | `@abendy/eslint-config/configs/typescript` | TypeScript strict |
+| **TypeScript** | `@abendy/eslint-config/configs/typescript` | TypeScript strict (opt-in) |
 | **Node** | `@abendy/eslint-config/configs/node` | Node.js rules |
 | **Remix** | `@abendy/eslint-config/configs/remix` | Remix routes |
 | **Test** | `@abendy/eslint-config/configs/test` | Test files |

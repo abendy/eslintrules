@@ -14,13 +14,13 @@ const prettierConfig = require('eslint-config-prettier')
 // Import sub-configs
 const base = require('./configs/base')
 const react = require('./configs/react')
-const typescript = require('./configs/typescript')
 const node = require('./configs/node')
 const remix = require('./configs/remix')
 const test = require('./configs/test')
 const json = require('./configs/json')
 const yaml = require('./configs/yaml')
-// Note: tailwind is NOT included by default - opt-in with require('./configs/tailwind')
+// Note: typescript and tailwind are NOT included by default
+// Opt-in with require('./configs/typescript') and require('./configs/tailwind')
 
 module.exports = [
     // Ignore patterns
@@ -40,7 +40,6 @@ module.exports = [
     // All configs in order
     ...base,
     ...react,
-    ...typescript,
     ...node,
     ...remix,
     ...test,
