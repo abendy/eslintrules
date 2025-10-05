@@ -9,6 +9,7 @@ const importPlugin = require('eslint-plugin-import')
 const promisePlugin = require('eslint-plugin-promise')
 const unicornPlugin = require('eslint-plugin-unicorn')
 const perfectionistPlugin = require('eslint-plugin-perfectionist')
+const nPlugin = require('eslint-plugin-n')
 const standardConfig = require('eslint-config-standard')
 
 const coreRules = require('../rules/core')
@@ -41,6 +42,7 @@ module.exports = [
             promise: promisePlugin,
             unicorn: unicornPlugin,
             perfectionist: perfectionistPlugin,
+            n: nPlugin,
         },
         settings: {
             ...importSettings,
