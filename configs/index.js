@@ -12,4 +12,5 @@ module.exports = {
     test: require('./test'),
     json: require('./json'),
     yaml: require('./yaml'),
+    tailwind: require('./tailwind'),
 }

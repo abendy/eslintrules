@@ -20,6 +20,7 @@ const remix = require('./configs/remix')
 const test = require('./configs/test')
 const json = require('./configs/json')
 const yaml = require('./configs/yaml')
+// Note: tailwind is NOT included by default - opt-in with require('./configs/tailwind')
 
 module.exports = [
     // Ignore patterns

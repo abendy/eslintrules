@@ -9,7 +9,6 @@ const importPlugin = require('eslint-plugin-import')
 const promisePlugin = require('eslint-plugin-promise')
 const unicornPlugin = require('eslint-plugin-unicorn')
 const perfectionistPlugin = require('eslint-plugin-perfectionist')
-const tailwindPlugin = require('eslint-plugin-tailwindcss')
 const standardConfig = require('eslint-config-standard')
 
 const coreRules = require('../rules/core')
@@ -42,7 +41,6 @@ module.exports = [
             promise: promisePlugin,
             unicorn: unicornPlugin,
             perfectionist: perfectionistPlugin,
-            tailwindcss: tailwindPlugin,
         },
         settings: {
             ...importSettings,
@@ -55,7 +53,6 @@ module.exports = [
             ...promiseRules,
             ...unicornRules,
             ...perfectionistRules,
-            'tailwindcss/no-custom-classname': 0,
         },
     },
 ]

@@ -19,6 +19,14 @@ module.exports = require('@abendy/eslint-config')
 
 Gets: Base + React + TypeScript + Node + Remix + Test + JSON + YAML
 
+**Note:** Tailwind CSS support is opt-in. To use it, add:
+```js
+module.exports = [
+    ...require('@abendy/eslint-config'),
+    ...require('@abendy/eslint-config/configs/tailwind'),
+]
+```
+
 ---
 
 ### Option 2: Pick Individual Configs
@@ -140,6 +148,7 @@ module.exports = [
 | **Test** | `@abendy/eslint-config/configs/test` | Test files |
 | **JSON** | `@abendy/eslint-config/configs/json` | JSON linting |
 | **YAML** | `@abendy/eslint-config/configs/yaml` | YAML linting |
+| **Tailwind** | `@abendy/eslint-config/configs/tailwind` | Tailwind CSS (opt-in) |
 
 ---
 
