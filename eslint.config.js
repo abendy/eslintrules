@@ -24,6 +24,7 @@ const unicornPlugin = require('eslint-plugin-unicorn')
 const promisePlugin = require('eslint-plugin-promise')
 const perfectionistPlugin = require('eslint-plugin-perfectionist')
 const nPlugin = require('eslint-plugin-n')
+const tailwindPlugin = require('eslint-plugin-tailwindcss')
 const prettierConfig = require('eslint-config-prettier')
 const standardConfig = require('eslint-config-standard')
 
@@ -79,6 +80,7 @@ module.exports = [
             promise: promisePlugin,
             unicorn: unicornPlugin,
             perfectionist: perfectionistPlugin,
+            tailwindcss: tailwindPlugin,
         },
         settings: {
             ...importSettings,
@@ -91,6 +93,7 @@ module.exports = [
             ...promiseRules,
             ...unicornRules,
             ...perfectionistRules,
+            'tailwindcss/no-custom-classname': 0,
         },
     },
 
