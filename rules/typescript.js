@@ -18,9 +18,9 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': [
         ERROR,
         {
-            vars: 'all',
             args: 'after-used',
             ignoreRestSiblings: false,
+            vars: 'all',
         },
     ],
     '@typescript-eslint/no-use-before-define': 0,
@@ -29,15 +29,15 @@ module.exports = {
     '@typescript-eslint/consistent-type-imports': [
         WARN,
         {
-            prefer: 'type-imports',
             disallowTypeAnnotations: true,
             fixStyle: 'inline-type-imports',
+            prefer: 'type-imports',
         },
     ],
 
     // Disable base rules that are covered by TS equivalents
-    'no-unused-vars': 0,
     'no-shadow': 0,
+    'no-unused-vars': 0,
 
     // Style rules (let Prettier handle most)
     '@typescript-eslint/indent': 0,

@@ -27,35 +27,34 @@ module.exports = {
     'no-case-declarations': 0,
     'no-cond-assign': WARN,
     'no-console': WARN,
-    'no-const-assign': WARN, // Match reach-out-now severity
     'no-debugger': WARN,
     'no-delete-var': WARN,
     'no-empty': WARN,
     'no-empty-function': WARN,
-    'no-eval': WARN, // Match reach-out-now severity
-    'no-extend-native': WARN, // Match reach-out-now severity
+    'no-eval': WARN,
+    'no-extend-native': WARN,
     'no-extra-semi': WARN,
     'no-floating-decimal': WARN,
-    'no-global-assign': WARN, // Match reach-out-now severity
+    'no-global-assign': WARN,
     'no-implicit-globals': WARN,
     'no-multi-spaces': WARN,
-    'no-redeclare': WARN, // Match reach-out-now severity
+    'no-redeclare': WARN,
     'no-shadow-restricted-names': WARN,
     'no-throw-literal': ERROR,
     'no-undef-init': WARN,
     'no-unused-vars': [
         ERROR,
         {
-            vars: 'all',
             args: 'after-used',
             ignoreRestSiblings: false,
+            vars: 'all',
         },
     ],
     'no-use-before-define': 0,
-    'no-var': WARN, // Match reach-out-now severity
+    'no-var': WARN,
     'no-void': 0,
     'prefer-arrow-callback': WARN,
-    'prefer-const': WARN, // Match reach-out-now severity
+    'prefer-const': WARN,
     'radix': ERROR,
     'strict': WARN,
 

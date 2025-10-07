@@ -17,19 +17,12 @@ module.exports = {
     'import/order': [
         WARN,
         {
-            groups: [
-                'builtin',
-                'external',
-                'internal',
-                'parent',
-                'sibling',
-                'index',
-            ],
-            'newlines-between': 'always',
-            alphabetize: {
-                order: 'asc',
+            'alphabetize': {
                 caseInsensitive: true,
+                order: 'asc',
             },
+            'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+            'newlines-between': 'always',
         },
     ],
 }

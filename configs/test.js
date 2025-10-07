@@ -19,8 +19,8 @@ module.exports = [
             },
         },
         rules: {
-            'no-console': 0,
             '@typescript-eslint/no-explicit-any': 0,
+            'no-console': 0,
             'no-empty-pattern': 0,
         },
     },

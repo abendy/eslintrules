@@ -1,88 +1,88 @@
 {
-    "name": "@abendy/eslint-config",
-    "version": "1.0.3",
-    "description": "Modern ESLint and Prettier configuration for TypeScript/React/Node/Remix projects",
-    "main": "eslint.config.js",
-    "files": [
-        "eslint.config.js",
-        "prettier.config.js",
-        ".prettierignore",
-        "configs",
-        "rules",
-        "settings"
-    ],
-    "exports": {
-        ".": "./eslint.config.js",
-        "./configs/*": "./configs/*.js",
-        "./rules/*": "./rules/*.js",
-        "./settings/*": "./settings/*.js",
-        "./prettier": "./prettier.config.js"
+  "name": "@abendy/eslint-config",
+  "version": "1.0.3",
+  "description": "Modern ESLint and Prettier configuration for TypeScript/React/Node/Remix projects",
+  "main": "eslint.config.js",
+  "files": [
+    "eslint.config.js",
+    "prettier.config.js",
+    ".prettierignore",
+    "configs",
+    "rules",
+    "settings"
+  ],
+  "exports": {
+    ".": "./eslint.config.js",
+    "./configs/*": "./configs/*.js",
+    "./rules/*": "./rules/*.js",
+    "./settings/*": "./settings/*.js",
+    "./prettier": "./prettier.config.js"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "prettier",
+    "typescript",
+    "react",
+    "remix",
+    "node"
+  ],
+  "author": "abendy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abendy/eslint-config"
+  },
+  "bugs": {
+    "url": "https://github.com/abendy/eslint-config/issues"
+  },
+  "peerDependencies": {
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0",
+    "tailwindcss": "^3.0.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "tailwindcss": {
+      "optional": true
     },
-    "keywords": [
-        "eslint",
-        "eslintconfig",
-        "prettier",
-        "typescript",
-        "react",
-        "remix",
-        "node"
-    ],
-    "author": "abendy",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/abendy/eslint-config"
-    },
-    "bugs": {
-        "url": "https://github.com/abendy/eslint-config/issues"
-    },
-    "peerDependencies": {
-        "eslint": "^9.0.0",
-        "prettier": "^3.0.0",
-        "tailwindcss": "^3.0.0",
-        "typescript": "^5.0.0"
-    },
-    "peerDependenciesMeta": {
-        "tailwindcss": {
-            "optional": true
-        },
-        "typescript": {
-            "optional": true
-        }
-    },
-    "dependencies": {
-        "@eslint/js": "^9.15.0",
-        "@typescript-eslint/eslint-plugin": "^8.14.0",
-        "@typescript-eslint/parser": "^8.14.0",
-        "eslint-config-prettier": "^9.1.0",
-        "eslint-config-standard": "^17.1.0",
-        "eslint-import-resolver-typescript": "^3.6.3",
-        "eslint-plugin-import": "^2.31.0",
-        "eslint-plugin-jsx-a11y": "^6.10.2",
-        "eslint-plugin-jsonc": "^2.18.2",
-        "eslint-plugin-n": "^17.13.2",
-        "eslint-plugin-perfectionist": "^4.3.0",
-        "eslint-plugin-promise": "^7.1.0",
-        "eslint-plugin-react": "^7.37.2",
-        "eslint-plugin-react-hooks": "^5.0.0",
-        "eslint-plugin-tailwindcss": "^3.17.5",
-        "eslint-plugin-unicorn": "^56.0.1",
-        "eslint-plugin-yml": "^1.15.0",
-        "globals": "^15.12.0",
-        "jsonc-eslint-parser": "^2.4.0",
-        "prettier-plugin-tailwindcss": "^0.6.9",
-        "yaml-eslint-parser": "^1.2.3"
-    },
-    "devDependencies": {
-        "eslint": "^9.15.0",
-        "prettier": "^3.3.3"
-    },
-    "scripts": {
-        "lint": "eslint .",
-        "lint:fix": "eslint . --fix",
-        "format": "prettier --write .",
-        "format:check": "prettier --check .",
-        "check": "npm run lint && npm run format:check",
-        "fix": "npm run lint:fix && npm run format"
+    "typescript": {
+      "optional": true
     }
+  },
+  "dependencies": {
+    "@eslint/js": "^9.15.0",
+    "@typescript-eslint/eslint-plugin": "^8.14.0",
+    "@typescript-eslint/parser": "^8.14.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-jsonc": "^2.18.2",
+    "eslint-plugin-n": "^17.13.2",
+    "eslint-plugin-perfectionist": "^4.3.0",
+    "eslint-plugin-promise": "^7.1.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-tailwindcss": "^3.17.5",
+    "eslint-plugin-unicorn": "^56.0.1",
+    "eslint-plugin-yml": "^1.15.0",
+    "globals": "^15.12.0",
+    "jsonc-eslint-parser": "^2.4.0",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "yaml-eslint-parser": "^1.2.3"
+  },
+  "devDependencies": {
+    "eslint": "^9.15.0",
+    "prettier": "^3.3.3"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run lint && npm run format:check",
+    "fix": "npm run lint:fix && npm run format"
+  }
 }

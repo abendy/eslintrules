@@ -3,8 +3,8 @@
  * Node.js-specific rules for server-side code and scripts
  */
 
-const globals = require('globals')
 const nPlugin = require('eslint-plugin-n')
+const globals = require('globals')
 
 const nodeRules = require('../rules/node')
 

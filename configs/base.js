@@ -4,19 +4,19 @@
  */
 
 const js = require('@eslint/js')
-const globals = require('globals')
+const standardConfig = require('eslint-config-standard')
 const importPlugin = require('eslint-plugin-import')
+const nPlugin = require('eslint-plugin-n')
+const perfectionistPlugin = require('eslint-plugin-perfectionist')
 const promisePlugin = require('eslint-plugin-promise')
 const unicornPlugin = require('eslint-plugin-unicorn')
-const perfectionistPlugin = require('eslint-plugin-perfectionist')
-const nPlugin = require('eslint-plugin-n')
-const standardConfig = require('eslint-config-standard')
+const globals = require('globals')
 
 const coreRules = require('../rules/core')
 const importRules = require('../rules/import')
+const perfectionistRules = require('../rules/perfectionist')
 const promiseRules = require('../rules/promise')
 const unicornRules = require('../rules/unicorn')
-const perfectionistRules = require('../rules/perfectionist')
 const importSettings = require('../settings/import')
 
 module.exports = [
@@ -24,7 +24,6 @@ module.exports = [
         files: ['**/*.{js,mjs,cjs,jsx,ts,tsx}'],
         languageOptions: {
             ecmaVersion: 2022,
-            sourceType: 'module',
             globals: {
                 ...globals.browser,
                 ...globals.node,
@@ -36,16 +35,14 @@ module.exports = [
                     jsx: true,
                 },
             },
+            sourceType: 'module',
         },
         plugins: {
             import: importPlugin,
+            n: nPlugin,
+            perfectionist: perfectionistPlugin,
             promise: promisePlugin,
             unicorn: unicornPlugin,
-            perfectionist: perfectionistPlugin,
-            n: nPlugin,
-        },
-        settings: {
-            ...importSettings,
         },
         rules: {
             ...js.configs.recommended.rules,
@@ -55,6 +52,9 @@ module.exports = [
             ...promiseRules,
             ...unicornRules,
             ...perfectionistRules,
+        },
+        settings: {
+            ...importSettings,
         },
     },
 ]

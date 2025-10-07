@@ -13,11 +13,11 @@ const prettierConfig = require('eslint-config-prettier')
 
 // Import sub-configs
 const base = require('./configs/base')
-const react = require('./configs/react')
+const json = require('./configs/json')
 const node = require('./configs/node')
+const react = require('./configs/react')
 const remix = require('./configs/remix')
 const test = require('./configs/test')
-const json = require('./configs/json')
 const yaml = require('./configs/yaml')
 // Note: typescript and tailwind are NOT included by default
 // Opt-in with require('./configs/typescript') and require('./configs/tailwind')

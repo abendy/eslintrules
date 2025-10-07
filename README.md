@@ -23,8 +23,8 @@ Gets: Base + React + Node + Remix + Test + JSON + YAML
 ```js
 module.exports = [
     ...require('@abendy/eslint-config'),
-    ...require('@abendy/eslint-config/configs/typescript'),  // If using TypeScript
-    ...require('@abendy/eslint-config/configs/tailwind'),    // If using Tailwind
+    ...require('@abendy/eslint-config/configs/typescript'), // If using TypeScript
+    ...require('@abendy/eslint-config/configs/tailwind'), // If using Tailwind
 ]
 ```
 
@@ -55,7 +55,7 @@ module.exports = [
 module.exports = [
     ...require('@abendy/eslint-config/configs/base'),
     ...require('@abendy/eslint-config/configs/react'),
-    ...require('@abendy/eslint-config/configs/typescript'),  // Opt-in
+    ...require('@abendy/eslint-config/configs/typescript'), // Opt-in
 ]
 ```
 
@@ -73,8 +73,8 @@ module.exports = [
         rules: {
             'no-console': 'off',
             'react/jsx-sort-props': 'off',
-        }
-    }
+        },
+    },
 ]
 ```
 
@@ -87,8 +87,8 @@ module.exports = [
         files: ['**/*.custom.js'],
         rules: {
             'no-console': 'off',
-        }
-    }
+        },
+    },
 ]
 ```
 
@@ -121,7 +121,7 @@ module.exports = [
         rules: {
             ...coreRules,
             'no-console': 'off', // Override
-        }
+        },
     },
     {
         files: ['**/*.jsx'],
@@ -129,8 +129,8 @@ module.exports = [
             ...coreRules,
             ...reactRules,
             'react/jsx-sort-props': 'off', // Override
-        }
-    }
+        },
+    },
 ]
 ```
 
@@ -138,34 +138,34 @@ module.exports = [
 
 ## Available Configs
 
-| Config | Path | Description |
-|--------|------|-------------|
-| **All** | `@abendy/eslint-config` | Everything combined |
-| **Base** | `@abendy/eslint-config/configs/base` | Core JS/ES6+ rules |
-| **React** | `@abendy/eslint-config/configs/react` | React + Hooks + a11y |
+| Config         | Path                                       | Description                |
+| -------------- | ------------------------------------------ | -------------------------- |
+| **All**        | `@abendy/eslint-config`                    | Everything combined        |
+| **Base**       | `@abendy/eslint-config/configs/base`       | Core JS/ES6+ rules         |
+| **React**      | `@abendy/eslint-config/configs/react`      | React + Hooks + a11y       |
 | **TypeScript** | `@abendy/eslint-config/configs/typescript` | TypeScript strict (opt-in) |
-| **Node** | `@abendy/eslint-config/configs/node` | Node.js rules |
-| **Remix** | `@abendy/eslint-config/configs/remix` | Remix routes |
-| **Test** | `@abendy/eslint-config/configs/test` | Test files |
-| **JSON** | `@abendy/eslint-config/configs/json` | JSON linting |
-| **YAML** | `@abendy/eslint-config/configs/yaml` | YAML linting |
-| **Tailwind** | `@abendy/eslint-config/configs/tailwind` | Tailwind CSS (opt-in) |
+| **Node**       | `@abendy/eslint-config/configs/node`       | Node.js rules              |
+| **Remix**      | `@abendy/eslint-config/configs/remix`      | Remix routes               |
+| **Test**       | `@abendy/eslint-config/configs/test`       | Test files                 |
+| **JSON**       | `@abendy/eslint-config/configs/json`       | JSON linting               |
+| **YAML**       | `@abendy/eslint-config/configs/yaml`       | YAML linting               |
+| **Tailwind**   | `@abendy/eslint-config/configs/tailwind`   | Tailwind CSS (opt-in)      |
 
 ---
 
 ## Available Rules
 
-| Rules | Path | Description |
-|-------|------|-------------|
-| **Core** | `@abendy/eslint-config/rules/core` | Core JavaScript rules |
-| **Import** | `@abendy/eslint-config/rules/import` | Import/export rules |
-| **React** | `@abendy/eslint-config/rules/react` | React component rules |
-| **TypeScript** | `@abendy/eslint-config/rules/typescript` | TypeScript rules |
-| **Promise** | `@abendy/eslint-config/rules/promise` | Promise best practices |
-| **Unicorn** | `@abendy/eslint-config/rules/unicorn` | Modern JS patterns |
-| **Perfectionist** | `@abendy/eslint-config/rules/perfectionist` | Auto-sorting rules |
-| **JSX a11y** | `@abendy/eslint-config/rules/jsx-a11y` | Accessibility rules |
-| **Node** | `@abendy/eslint-config/rules/node` | Node.js rules |
+| Rules             | Path                                        | Description            |
+| ----------------- | ------------------------------------------- | ---------------------- |
+| **Core**          | `@abendy/eslint-config/rules/core`          | Core JavaScript rules  |
+| **Import**        | `@abendy/eslint-config/rules/import`        | Import/export rules    |
+| **React**         | `@abendy/eslint-config/rules/react`         | React component rules  |
+| **TypeScript**    | `@abendy/eslint-config/rules/typescript`    | TypeScript rules       |
+| **Promise**       | `@abendy/eslint-config/rules/promise`       | Promise best practices |
+| **Unicorn**       | `@abendy/eslint-config/rules/unicorn`       | Modern JS patterns     |
+| **Perfectionist** | `@abendy/eslint-config/rules/perfectionist` | Auto-sorting rules     |
+| **JSX a11y**      | `@abendy/eslint-config/rules/jsx-a11y`      | Accessibility rules    |
+| **Node**          | `@abendy/eslint-config/rules/node`          | Node.js rules          |
 
 ---
 

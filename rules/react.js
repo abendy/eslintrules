@@ -18,10 +18,7 @@ module.exports = {
     'react/jsx-indent': 0, // Let Prettier handle
     'react/jsx-indent-props': [ERROR, 4], // 4 spaces for props (reach-out-now used 2)
     'react/jsx-max-depth': 0,
-    'react/jsx-max-props-per-line': [
-        WARN,
-        { maximum: { single: 4, multi: 1 } },
-    ],
+    'react/jsx-max-props-per-line': [WARN, { maximum: { multi: 1, single: 4 } }],
     'react/jsx-no-bind': ERROR, // From reach-out-now (stricter)
     'react/jsx-one-expression-per-line': 0,
 
@@ -30,10 +27,10 @@ module.exports = {
         ERROR,
         {
             callbacksLast: true,
-            shorthandFirst: true,
             ignoreCase: true,
             noSortAlphabetically: true,
             reservedFirst: true,
+            shorthandFirst: true,
         },
     ],
 
