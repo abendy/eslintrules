@@ -20,6 +20,7 @@ module.exports = require('@abendy/eslint-config')
 Gets: Base + React + Node + Remix + Test + JSON + YAML
 
 **Note:** TypeScript and Tailwind CSS are opt-in. To use them:
+
 ```js
 module.exports = [
     ...require('@abendy/eslint-config'),
@@ -206,7 +207,11 @@ Your project should have a `tsconfig.json`:
         "strict": true,
         "esModuleInterop": true,
         "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "types": ["node"]
     }
 }
 ```
