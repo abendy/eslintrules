@@ -7,11 +7,11 @@ const WARN = 1
 
 module.exports = {
     // Enable the ones you want auto-sorted
-    'perfectionist/sort-objects': WARN,
-    'perfectionist/sort-object-types': WARN,
-    'perfectionist/sort-interfaces': WARN,
-    'perfectionist/sort-named-exports': WARN,
-    'perfectionist/sort-named-imports': WARN,
+    'perfectionist/sort-interfaces': [WARN, { partitionByComment: true }],
+    'perfectionist/sort-named-exports': [WARN, { partitionByComment: true }],
+    'perfectionist/sort-named-imports': [WARN, { partitionByComment: true }],
+    'perfectionist/sort-object-types': [WARN, { partitionByComment: true }],
+    'perfectionist/sort-objects': [WARN, { partitionByComment: true }],
 
     // Keep these off - too opinionated or handled elsewhere
     'perfectionist/sort-classes': 0,
