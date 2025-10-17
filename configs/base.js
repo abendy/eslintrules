@@ -4,7 +4,6 @@
  */
 
 const js = require('@eslint/js')
-const standardConfig = require('eslint-config-standard')
 const importPlugin = require('eslint-plugin-import')
 const nPlugin = require('eslint-plugin-n')
 const perfectionistPlugin = require('eslint-plugin-perfectionist')
@@ -46,7 +45,6 @@ module.exports = [
         },
         rules: {
             ...js.configs.recommended.rules,
-            ...standardConfig.rules,
             ...coreRules,
             ...importRules,
             ...promiseRules,
