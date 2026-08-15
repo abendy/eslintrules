@@ -151,6 +151,7 @@ module.exports = [
 | **JSON**       | `@abendy/eslint-config/configs/json`       | JSON linting               |
 | **YAML**       | `@abendy/eslint-config/configs/yaml`       | YAML linting               |
 | **Tailwind**   | `@abendy/eslint-config/configs/tailwind`   | Tailwind CSS (opt-in)      |
+| **Stylelint**  | `@abendy/eslint-config/stylelint`          | Shared SCSS linting        |
 
 ---
 

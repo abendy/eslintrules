@@ -1,10 +1,11 @@
 {
   "name": "@abendy/eslint-config",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Modern ESLint and Prettier configuration for TypeScript/React/Node/Remix projects",
   "main": "eslint.config.js",
   "files": [
     "eslint.config.js",
+    "stylelint.config.js",
     "prettier.config.js",
     ".prettierignore",
     "configs",
@@ -16,6 +17,7 @@
     "./configs/*": "./configs/*.js",
     "./rules/*": "./rules/*.js",
     "./settings/*": "./settings/*.js",
+    "./stylelint": "./stylelint.config.js",
     "./prettier": "./prettier.config.js"
   },
   "keywords": [
@@ -39,6 +41,7 @@
   "peerDependencies": {
     "eslint": "^9.0.0",
     "prettier": "^3.0.0",
+    "stylelint": "^17.0.0",
     "tailwindcss": "^3.0.0",
     "typescript": "^5.0.0"
   },
@@ -70,11 +73,13 @@
     "globals": "^15.12.0",
     "jsonc-eslint-parser": "^2.4.0",
     "prettier-plugin-tailwindcss": "^0.6.9",
+    "stylelint-config-standard-scss": "^17.0.0",
     "yaml-eslint-parser": "^1.2.3"
   },
   "devDependencies": {
     "eslint": "^9.15.0",
-    "prettier": "^3.3.3"
+    "prettier": "^3.3.3",
+    "stylelint": "^17.14.1"
   },
   "scripts": {
     "lint": "eslint .",
